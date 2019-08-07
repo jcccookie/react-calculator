@@ -1,5 +1,5 @@
 ## Calculator Web Application using React
-# https://jcccookie.github.io/react-calculator/
+https://jcccookie.github.io/react-calculator/
 
 Improvement to do: Display Scaling
 
