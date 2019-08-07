@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-size: $m-size;
+}
+
+button {
+   cursor: pointer;
+}
+
+button:focus { 
+   outline: none; 
+}
+
+button:disabled {
+   cursor: default
+}
+
+.App {
+   height: 100vh;
+   width: 100%;
+
+   background-image: linear-gradient(to bottom right, $color-leaf-transparent, $color-green-transparent);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}

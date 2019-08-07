@@ -1,0 +1,47 @@
+.keypad {
+   height: 40rem;
+   display: flex;
+
+}
+
+.key {
+   width: 8rem;
+   height: 8rem;
+   border-top: 1px solid #777;
+   border-right: 1px solid #666;
+   text-align: center;
+   background: transparent;
+   font-size: 3rem;
+   line-height: 8rem;
+}
+
+.input-keys {
+   width: 24rem;
+}
+
+.function-keys {
+   display: flex;
+   height: 8rem;
+   background: rgb(166, 166, 166);
+}
+
+.digit-keys {
+   display: flex;
+   background: #e0e0e7;
+   height: 32rem;
+   flex-direction: row;
+   flex-wrap: wrap-reverse;
+}
+
+.operator-keys {
+   width: 8rem;
+   background: linear-gradient(to bottom, rgba(253,29,71,1) 0%, rgba(252,176,69,1) 100%);
+   
+   .key {
+      color: white;
+   }
+}
+
+.key-0 {
+   width: 16rem;
+}

@@ -1,0 +1,15 @@
+.display {
+   color: white;
+   background-color: $color-light-black;
+   line-height: 12rem;
+   font-size: 4rem;
+   flex: 1;
+}
+
+.display__value {
+   display: flex;
+   justify-content: flex-end;
+   transform-origin: right;
+   padding: 0 3rem;
+   right: 0;
+}
