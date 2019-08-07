@@ -33,14 +33,12 @@ class Calculator extends React.Component {
 
    onDelete = () => {
       this.setState((prevState) => ({ 
-         displayValue: prevState.displayValue.substring(0, prevState.displayValue.length - 1)
+         displayValue: prevState.displayValue.substring(0, prevState.displayValue.length - 1) || '0'
       }))
    }
 
    onHandleDigit = (digit) => {
       const { displayValue, waitingOperand } = this.state;
-
-      
 
       if (waitingOperand) {
          this.setState(() => ({ displayValue: String(digit), waitingOperand: false }));
