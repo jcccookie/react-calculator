@@ -9,7 +9,10 @@
 .display__value {
    display: flex;
    justify-content: flex-end;
+   line-height: 150%;
    transform-origin: right;
-   padding: 0 3rem;
+   padding: 3rem 3rem;
+   margin-bottom: 0;
    right: 0;
+   word-break: break-all;
 }

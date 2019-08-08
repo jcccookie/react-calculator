@@ -5,8 +5,8 @@ import Keypad from './Keypad/Keypad';
 const Operations = {
    '+': (prevValue, nextValue) => prevValue + nextValue,
    '-': (prevValue, nextValue) => prevValue - nextValue,
-   'x': (prevValue, nextValue) => prevValue * nextValue,
-   '÷': (prevValue, nextValue) => prevValue / nextValue,
+   '*': (prevValue, nextValue) => prevValue * nextValue,
+   '/': (prevValue, nextValue) => prevValue / nextValue,
    '=': (prevValue, nextValue) => nextValue
 }
 
@@ -38,7 +38,11 @@ class Calculator extends React.Component {
    }
 
    onHandleDigit = (digit) => {
-      const { displayValue, waitingOperand } = this.state;
+      let { displayValue, waitingOperand } = this.state;
+
+      if (displayValue.length >= 10) {
+         displayValue = displayValue.substring(0, 10);
+      }
 
       if (waitingOperand) {
          this.setState(() => ({ displayValue: String(digit), waitingOperand: false }));
@@ -47,8 +51,8 @@ class Calculator extends React.Component {
          if (displayValue === '0') {
             this.setState(() => ({ displayValue: String(digit) }));
          } else {
-            this.setState((prevState) => ({
-               displayValue: prevState.displayValue + digit,
+            this.setState(() => ({
+               displayValue: displayValue + digit,
                waitingOperand: false
             }))
          }
