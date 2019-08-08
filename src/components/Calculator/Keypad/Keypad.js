@@ -40,8 +40,8 @@ class Keypad extends React.Component {
                </div>
             </div>
             <div className='operator-keys'>
-               <Key value={'÷'} className='key' onClick={() => this.props.onPerformOperation('÷')}/>
-               <Key value={'x'} className='key' onClick={() => this.props.onPerformOperation('x')}/>
+               <Key value={'÷'} className='key' onClick={() => this.props.onPerformOperation('/')}/>
+               <Key value={'x'} className='key' onClick={() => this.props.onPerformOperation('*')}/>
                <Key value={'-'} className='key' onClick={() => this.props.onPerformOperation('-')}/>
                <Key value={'+'} className='key' onClick={() => this.props.onPerformOperation('+')}/>
                <Key value={'='} className='key' onClick={() => this.props.onPerformOperation('=')}/>
